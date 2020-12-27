@@ -19,5 +19,15 @@ public class App
     	String json = g.toJson(emp);
     	
     	System.out.println(json);
+    	
+    	
+    	Employee emp2 = new Employee();
+    	
+    	
+    	emp2 = g.fromJson(json, Employee.class);
+    	
+    	System.out.println(emp2.getFirst_name());
+    	System.out.println(emp2.getLast_name());
+    	System.out.println(emp2.getAge());
     }
 }
